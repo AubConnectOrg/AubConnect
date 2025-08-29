@@ -18,7 +18,7 @@ const CoursesPage = () => {
     const fetchData = async () => {
       try {
         // Fetch all courses
-        const coursesResponse = await fetch("http://localhost:5001/api/courses");
+        const coursesResponse = await fetch("https://aubconnectbackend-h22c.onrender.com/api/courses");
         
         if (!coursesResponse.ok) {
           throw new Error("Failed to fetch courses");
@@ -28,7 +28,7 @@ const CoursesPage = () => {
         setCourses(coursesData);
         
         // Fetch all departments
-        const departmentsResponse = await fetch("http://localhost:5001/api/departments");
+        const departmentsResponse = await fetch("https://aubconnectbackend-h22c.onrender.com/api/departments");
         
         if (!departmentsResponse.ok) {
           throw new Error("Failed to fetch departments");
@@ -76,7 +76,7 @@ const CoursesPage = () => {
   });
 
   // Get available course levels
-  const courseLevels = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  const courseLevels = ["1", "2", "3"];
 
   return (
     <div className="min-h-screen flex flex-col">
